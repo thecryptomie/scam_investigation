@@ -31,8 +31,8 @@
 								
 								<li><a href="#background" id="portfolio-link">Background</a></li>
 								<li><a href="#timeline" id="about-link">Timeline</a></li>
-								<li><a href="#post-mortem" id="about-link">Attack Vector</a></li>
-								<li><a href="#deep-dive" id="about-link">Scammer's Wallet</a></li>
+								<li><a href="#attack-vectors" id="about-link">Attack Vectors</a></li>
+								<li><a href="#scammer-wallets" id="about-link">Scammer Wallets</a></li>
 								<li><a href="#summary" id="contact-link">Summary</a></li>
 								
 							</ul>
@@ -73,7 +73,9 @@
 							</header>
 
 							<p>It was brought to the attention of the Lynx community that a
-								scammer was impersonating respected community manager, Thin Diesel.
+								scammer was impersonating respected community manager, Thin Diesel. After the user alerted
+								the twitter community, a second scammer took advantage and impersonated the victim's account
+								and was able to get another community member to send them a free NFT before deleting the account.
 								Thankfully, we have an immutable, public ledger at our disposal and so we ran
 								an investigation into the scam to track down the prepetrator. Here is what
 								we found.
@@ -98,64 +100,96 @@
 								<li>Discord user IncomingAlgoMillionaire.algo reported that he was scammed out of 10 lynxes.
 									The user reported that there was to be a transaction of 1600A for 10 lynxes.
 								</li>
-								<li>The exchange
-									 was supposed to be handled through p2p transactions; IncomingAlgoMillionaire.algo was to send 10 lynxes
+								<li>The exchange was supposed to be handled through p2p transactions; IncomingAlgoMillionaire.algo was to send 10 lynxes
 									to the "fake" thin diesel's wallet, then thin diesel would send the 1600 ALGO payment</li>
 								<li>This is your reminder to <b>NEVER</b> use direct transactions to handle swaps. Instead, use trustless
 									services like <a href="https://app.swapper.tools/">swapper tools</a> or <a href="https://algorillas.exchange/">algorillas.exchange</a>.
 									These platforms utilize atomic swaps to handle exchanges in a trustless manner.
 								</li>
+								<li> After announcing the scam on twitter, a second scam occurred and led to a user losing a lynx. </li>
 
 							</ul>
 							</div>
 					</div>
 				</section>
 							
-				<section id="post-mortem" class="four">
+				<section id="attack-vectors" class="four">
 
 							<header>
-								<h2>Scammer's Attack Vector</h2>
+								<h2>Scammer Attack Vectors</h2>
 							</header>
 <!--							<div style="display: inline-block; text-align: left;">-->
-					<div>
+					<h3>Attack Vector #1</h3>
+					<div style="display: inline-block; text-align: left; margin: 50px;">
 <!--								<h3>The Scammer's Technique</h3>-->
 								<li>The scammer gained the trust of the community member by impersonating the community manager, Thin Diesel.</li>
 								<li>The claim by IncomingAlgoMillionaire.algo is that the scammer was able to copy Thin Diesels account <br>
-								down to the exact 4-digit number. <li>
+								down to the exact 4-digit number. </li>
 								<li>Here is the screenshot they shared side by side with
 									with a screenshot of the real Thin Diesel. Notice the different dates.</li>
+					</div>
 								<img src="images/fake_thin_real_thin.png" style="margin: 0 0% 0 0;" align="center" width="70%"> <br>
+					<div style="display: inline-block; text-align: left; margin: 50px;">
 						<li>As a developer of discord bots, I thought something was off here. </li>
-									<li>Discord goes
+						<li>Discord goes
 								to great lengths to protect us from impersonators and <br> one of the ways they do this is by
 								appending a unique 4-digit identifier to the end of each username.</li>
 						<li>So, to test this claim, I attempted to copy Thin Diesel's username. As you can see below, this is
 						impossible. <br>Discord raises an error saying the account name is taken.</li>
+					</div>
+					<span>
 						<video controls="controls" width="75%" height="75%" name="Video Name">
 							  <source src="images/copy_thin.mov">
 							</video>
-						<li>Nevertheless, I wanted to give them the benefit of doubt. Maybe the last letter was actually an uppercase "i"?<br>
-						After all, this is common place in phising emails. So, let's compare:</li>
+						</span>
+					<div style="display: inline-block; text-align: left; margin: 50px;">
+						<li>Nevertheless, I wanted to give them the benefit of doubt. Maybe the last letter was actually an uppercase "i"?
+						After all, this is common place in phising emails and discord scams. So, let's compare:</li>
 						<img src="images/thin_I_vs_thin_l.png" style="margin: 0 0 0 0;" align="center" width="70%"> <br>
 						<li>As you can see, the uppercase "i" is missing the small upturn on the bottom.
 						Oddly enough, this small upturn is also present in the screenshot shared by IncomingAlgoMillionaire.algo, which we know is impossible from the video above.</li>
+					</div>
+				<h3>Attack Vector #2</h3>
+					<div style="display: inline-block; text-align: left; margin: 50px;">
+<!--								<h3>The Scammer's Technique</h3>-->
+						<li>The second attack occurred on twitter where someone impersonated the twitter account of
+							original victim and successfully scammed Lynx Genesis #0915 from twitter user <a href="https://twitter.com/WamDiggity">wamdiggity.algo</a></li>
+						<li>The scammer did this by replying to a user who replied to the <a href="https://twitter.com/AlgoIncoming/status/1611077824873664514?s=20&t=uUV6RpGelnfqrekiEwuacQ">original victims tweet</a> as if they were the victim. </li>
+						<li>The user did this by creating a twitter account @Algolncoming. Due to the font style chosen by twitter
+						 a lowercase "l" looks identical to an uppercase "i". </li>
+						<li>
+							We can see this if we copy and paste the twitter handle in the thread of replies on the original vitcims tweet (screenshot below) in MS word and change the font.
+						</li>
+						<img src="images/fake_algoincoming.png" style="margin: 0 0 0 0;" align="center" width="70%"> <br>
+						<li>In the gif below, we are seeing the same text in two different fonts; Calibri and Times New Roman. The lowercase "l"
+						becomes obvious when we switch to Times New Roman.</li>
+						<img src="images/font.gif" style="margin: 0 0 0 0;" align="center" width="70%"> <br>
 
+					</div>
 
-							</div>
 				</section>
 
-				<section id="deep-dive" class="five">
-					<div class="container">
-						<header>
-							<h2>Scammer's Wallet</h2>
+				<section id="scammer-wallets" class="five">
+					<header>
+							<h2>Scammer Wallets</h2>
 						</header>
+					<h3>Scammer Wallet #1</h3>
+					<div style="display: inline-block; text-align: left; margin: 50px;">
 						<p>This is where things get interesting. </p>
-						<li><a href="https://algoexplorer.io/address/TXS3EHXOP2FJWVZXI3FM2N34HTM5TPL77VFDIU4WI22IVOUDNIQCEPYMDY">TXS3...YMDY</a></li>
-									<li>As you can see, this wallet was funded by a 5 ALGO transaction from the discord user who was scammed.</li>
+						<li>The scammer's wallet is: <a href="https://algoexplorer.io/address/TXS3EHXOP2FJWVZXI3FM2N34HTM5TPL77VFDIU4WI22IVOUDNIQCEPYMDY">TXS3...YMDY</a></li>
+						<li>As you can see, this wallet was funded by a 5 ALGO transaction from the discord user who was scammed.</li>
 						<li>The user made it clear they sent them 5 ALGO, before the lynxes. See this <a href="https://twitter.com/AlgoIncoming/status/1611079666819006465?s=20&t=uUV6RpGelnfqrekiEwuacQ">tweet</a></a></li>
 						<li>While this could be true, it could also be a cover your ass moment. Why?</li>
 						<li>The <a href="https://algoexplorer.io/address/GC5ICHM3HWCZR6AJETA3RXQVCFLKZU6LQCFQH2I42ACSJ7UHEAO4R63TIM">GC5I...3TIM</a> address was funded by <a href="https://algoexplorer.io/address/NBRBV5DZBOWJUSAFKV5SDOBJ4PZAKUVPGS3LWP5VMS7WKIEWKHADJWDAMA">NBRB...DAMA</a> through this <a href="https://algoexplorer.io/tx/R626AZO6Y475CLRT77W55Q3PA7PHO5DCJ6BYSJFYLBKK52K7FDCA">transaction</a></li>
-						<li>The suspicious part is that the same address, NBRB...DAMA, also funding the discord users wallet through this <a href="https://algoexplorer.io/tx/POHP7KNKPAMLHIS67ISNP4YB7QWWO7YT667TF75Y5ZB4IPS5ICRQ">transaction.</a></li>
+						<li>The odd part is that the same address, NBRB...DAMA, also funded the discord users wallet through this <a href="https://algoexplorer.io/tx/POHP7KNKPAMLHIS67ISNP4YB7QWWO7YT667TF75Y5ZB4IPS5ICRQ">transaction.</a></li>
+					</div>
+					<h3>Scammer Wallet #2</h3>
+					<div style="display: inline-block; text-align: left; margin: 50px;">
+						<li>This scenario is much more cut and dry and the scammer is clearly identifiable</li>
+						<li>The scammer's wallet is: <a href="https://algoexplorer.io/address/42BNYMJWUVORDL6UPUQWQO3SBZ22A5Y4ZH3KH6YH4DKVWNCDWWYG4LLVZQ">42BN...LVZQ</a></li>
+						<li>This wallet was funded by M4QT...LK4I through this <a href="https://algoexplorer.io/tx/MB5LAH7OSNRSKKEWMMNIVOY4HMPSTW53S4UQY5HLGGUJZ4IIQCPQ">transaction</a></li>
+						<li>Finally, we see that the M4QT...LK4I wallet was funded by <a href="https://algoexplorer.io/address/IGLKS2LPM2BFBHD4Y23KZJD4USKWUTYM7YKGZ2YXISSAIAI2L2RPRY3KLQ">IGLK...3KLQ</a></li>
+						<li>The last wallet is registered with a Non-fungible domain (NFD) <a href="https://app.nf.domains/name/starrcadeius.algo">starrcadeius.algo</a> which is verified on twitter and discord.</li>
 					</div>
 				</section>
 
